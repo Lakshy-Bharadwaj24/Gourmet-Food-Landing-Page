@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #212531;
+    color: white;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    color: #ffcc00;
+}
+
+/* Navigation */
+.nav {
+    display: flex; justify-content: space-between; align-items: center;
+    background: white; color: black; height: 65px; padding: 1em 9%;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+}
+.logo { font-size: 2.5rem; font-weight: bolder; }
+.logo a { color: #333; }
+.logo i { color: #ffcc00; padding-right: 1rem; }
+.menu { display: flex; list-style: none; }
+.menu li { margin: 0 1.5rem; }
+.menu li a { font-size: 1.8rem; color: #333; font-weight: bold; }
+.menu li:hover { transform: scale(1.1); }
+.order { text-shadow: 1px 1px 0 #ffcc00; }
+
+/* Hero Section */
+.home {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    min-height: 100vh; align-items: center; padding-top: 8rem;
+}
+.home .content { flex: 1 1 40rem; }
+.home .content h3 { font-size: 5rem; color: white; line-height: 1.2; }
+.mainfont { font-family: "Jacques Francois Shadow", cursive; }
+.yellowColor { color: #ffcc00; }
+.home .content p { font-size: 1.7rem; color: #ccc; padding: 1rem 0; }
+.home .image { flex: 1 1 30rem; }
+.home .image img { width: 90%; animation: float 3s linear infinite; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3rem); }
+}
+
+.btn {
+    display: inline-block; padding: 0.8rem 3rem; border: 0.2rem solid white;
+    color: white; font-size: 1.7rem; border-radius: 0.5rem; margin-top: 1rem;
+}
+.btn:hover { background: #ffcc00; color: #212531; border-color: #ffcc00; }
+
+/* Menu Grid */
+.menu-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+}
+.menu-card {
+    background: white; padding: 20px; border-radius: 10px;
+    text-align: center; color: #333;
+}
+.menu-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+.menu-card img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+.menu-card h3 { font-size: 2rem; }
+.menu-card p { font-size: 1.8rem; font-weight: bold; color: #ffcc00; margin: 1rem 0; }
+.order-btn { background: #ffcc00; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+/* Newsletter */
+.newsletter-section { background: #ffcc00; text-align: center; color: #212531; }
+.newsletter-box h2 { font-size: 3rem; }
+.newsletter-box p { font-size: 1.6rem; margin: 1rem 0 2rem; }
+.newsletter-form { display: flex; justify-content: center; }
+.newsletter-form input { padding: 1.5rem; width: 300px; border-radius: 25px 0 0 25px; font-size: 1.4rem; }
+.subscribe-btn { padding: 1.5rem 3rem; background: #212531; color: white; border-radius: 0 25px 25px 0; cursor: pointer; font-weight: bold; }
+
+/* Contact Section */
+.contact-section { background: #fff; color: #333; }
+.contact-container { display: flex; gap: 50px; flex-wrap: wrap; }
+.contact-info { flex: 1; padding: 20px; border-left: 5px solid #ffcc00; background: #f9f9f9; }
+.contact-info h3 { font-size: 2.2rem; margin-bottom: 1rem; }
+.contact-info p { font-size: 1.6rem; margin: 0.5rem 0; }
+.contact-form { flex: 2; display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea { padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1.5rem; }
+.submit-btn { padding: 1.5rem; background: #ffcc00; font-weight: bold; cursor: pointer; border-radius: 8px; }
+
+/* Footer */
+footer { background: #1a1a1a; padding: 3rem 9%; text-align: center; color: white; }
+.footer-content p { font-size: 1.4rem; }
+.social-links { margin-top: 1rem; }
+.social-links a { color: #ffcc00; margin: 0 1rem; font-size: 1.6rem; }
+
+/* Responsive Burger Menu */
+.menu-button-container { display: none; height: 100%; width: 30px; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; }
+#menu-toggle { display: none; }
+.menu-button, .menu-button::before, .menu-button::after { display: block; background-color: black; position: absolute; height: 4px; width: 30px; border-radius: 3px; }
+.menu-button::before { content: ""; margin-top: -8px; }
+.menu-button::after { content: ""; margin-top: 8px; }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-button-container { display: flex; }
+    .menu { position: absolute; top: 65px; left: 0; flex-direction: column; width: 100%; background: white; display: none; }
+    #menu-toggle:checked ~ .menu { display: flex; }
+    .menu li { padding: 1.5rem; border-bottom: 1px solid #eee; width: 100%; text-align: center; }
+    .home { text-align: center; }
+    .contact-container { flex-direction: column; }
+    .newsletter-form { flex-direction: column; align-items: center; gap: 1rem; }
+    .newsletter-form input, .subscribe-btn { border-radius: 25px; width: 100%; }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cheese Decker | Foodie Express</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+             
+    <header>
+        <section class="nav">
+            <div class="logo">
+                <a href="#"><i class="fas fa-utensils"></i>food</a>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-button-container" for="menu-toggle">
+                <div class="menu-button"></div>
+            </label>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Popular</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+                <li><a href="#menu" class="order">Menu</a></li>
+            </ul>
+        </section>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3 class="mainfont">The Ch<span class="yellowColor">ee</span>se Decker</h3>
+            <h3>fastest f<span class="yellowColor">oo</span>d for, instant <span class="yellowColor">Hunger</span></h3>
+            <p>A taste unforgettable! We make the freshest and juiciest burgers just for you.</p>
+            <a href="#menu" class="btn">ORDER NOW</a>
+        </div>
+        <div class="image">
+            <img src="burger-img.png" alt="Burger"> </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 class="heading">About Our Food</h2>
+        <p style="text-align: center; font-size: 1.8rem; color: #eee; max-width: 800px; margin: 0 auto;">
+        We use world-class ingredients to create the best burgers for you. Fresh buns and organic veggies are our hallmark.
+        </p>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2 class="heading">Popular Menu</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <img src="Double Cheese.png" alt="Burger">
+                <h3>Classic Veggie</h3>
+                <p>$5.99</p>
+                <button class="order-btn">Add to Cart</button>
+            </div>
+            <div class="menu-card">
+                <img src="burger-img.png" alt="Burger">
+                <h3>Double Cheese</h3>
+                <p>$8.99</p>
+                <button class="order-btn">Add to Cart</button>
+            </div>
+            <div class="menu-card">
+                <img src="Spicy Paneer.png" alt="Burger">
+                <h3>Spicy Paneer</h3>
+                <p>$7.49</p>
+                <button class="order-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter-section">
+        <div class="newsletter-box">
+            <h2>Get 20% Off Your First Order!</h2>
+            <p>Subscribe to our newsletter and get the latest deals delivered to your email.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter Your Email..." required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact-section">
+        <h2 class="heading">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                <p>📍 123 Foodie Street, New Delhi, India</p>
+                <p>📞 +91 98765 43210</p>
+                <p>📧 info@bireenainfo.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Foodie Express | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
